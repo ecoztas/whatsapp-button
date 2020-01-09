@@ -1,0 +1,67 @@
+/**
+ * @package    whatsapp-button
+ * @author     ÖZTAŞ, Emre Can <me@emrecanoztas.com>
+ * @copyright  2019 https://emrecanoztas.com
+ * @license    https://opensource.org/licenses/MIT  MIT License
+ * @link       https://github.com/ecoztas/whatsapp-button
+ * @since      Version 1.0.0
+ */
+
+@charset 'utf-8';
+
+// VARIABLES
+$whatsapp_svg_paths: (
+    'circle': '../svg/whatsapp-circle.svg',
+    'square': '../svg/whatsapp-square.svg'
+);
+
+$sizes: (
+    'xs': '16px',
+    'sm': '32px',
+    'md': '64px',
+    'lg': '128px'
+);
+
+// MODULES
+.whatsapp-circle {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    border: none;
+    text-decoration: none;
+    z-index: 1000;
+    width: #{map-get($sizes, 'md')};
+    height: #{map-get($sizes, 'md')};
+    background: url(#{map-get($whatsapp_svg_paths, 'circle')});
+    background-size: #{map-get($sizes, 'md')} #{map-get($sizes, 'md')};
+}
+
+.whatsapp-square {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    border: none;
+    text-decoration: none;
+    z-index: 1000;
+    width: #{map-get($sizes, 'md')};
+    height: #{map-get($sizes, 'md')};
+    background: url(#{map-get($whatsapp_svg_paths, 'square')});
+    background-size: #{map-get($sizes, 'md')} #{map-get($sizes, 'md')};
+}
+
+.position-left {
+    left: 12px;
+}
+
+.position-right {
+    right: 12px;
+}
+
+// MIXINS
+@each $size_name, $size_value in $sizes {
+    .size-#{$size_name} {
+        width: #{$size_value} !important;
+        height: #{$size_value} !important;
+        background-size: #{$size_value} #{$size_value} !important;
+    }
+}

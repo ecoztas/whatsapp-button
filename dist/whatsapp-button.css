@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * @package    whatsapp-button
+ * @author     ÖZTAŞ, Emre Can <me@emrecanoztas.com>
+ * @copyright  2019 https://emrecanoztas.com
+ * @license    https://opensource.org/licenses/MIT  MIT License
+ * @link       https://github.com/ecoztas/whatsapp-button
+ * @since      Version 1.0.0
+ */
+.whatsapp-circle {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  border: none;
+  text-decoration: none;
+  z-index: 1000;
+  width: 64px;
+  height: 64px;
+  background: url(../svg/whatsapp-circle.svg);
+  background-size: 64px 64px; }
+
+.whatsapp-square {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  border: none;
+  text-decoration: none;
+  z-index: 1000;
+  width: 64px;
+  height: 64px;
+  background: url(../svg/whatsapp-square.svg);
+  background-size: 64px 64px; }
+
+.position-left {
+  left: 12px; }
+
+.position-right {
+  right: 12px; }
+
+.size-xs {
+  width: 16px !important;
+  height: 16px !important;
+  background-size: 16px 16px !important; }
+
+.size-sm {
+  width: 32px !important;
+  height: 32px !important;
+  background-size: 32px 32px !important; }
+
+.size-md {
+  width: 64px !important;
+  height: 64px !important;
+  background-size: 64px 64px !important; }
+
+.size-lg {
+  width: 128px !important;
+  height: 128px !important;
+  background-size: 128px 128px !important; }
