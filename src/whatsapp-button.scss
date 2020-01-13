@@ -9,20 +9,29 @@
 
 @charset 'utf-8';
 
-// VARIABLES
+//- VARIABLES
 $whatsapp_svg_paths: (
     'circle': '../svg/whatsapp-circle.svg',
     'square': '../svg/whatsapp-square.svg'
 );
 
+//- FONT AWESOME'S SIZES
 $sizes: (
-    'xs': '16px',
-    'sm': '32px',
-    'md': '64px',
-    'lg': '128px'
+    'xs': .75em,
+    'sm': .875em,
+    'lg': 1.33em,
+    '2x': 2em,
+    '3x': 3em,
+    '4x': 4em,
+    '5x': 5em,
+    '6x': 6em,
+    '7x': 7em,
+    '8x': 8em,
+    '9x': 9em,
+    '10x': 10em
 );
 
-// MODULES
+//- MODULES
 .whatsapp-circle {
     position: fixed;
     bottom: 12px;
@@ -30,10 +39,10 @@ $sizes: (
     border: none;
     text-decoration: none;
     z-index: 1000;
-    width: #{map-get($sizes, 'md')};
-    height: #{map-get($sizes, 'md')};
+    width: #{map-get($sizes, '4x')};
+    height: #{map-get($sizes, '4x')};
     background: url(#{map-get($whatsapp_svg_paths, 'circle')});
-    background-size: #{map-get($sizes, 'md')} #{map-get($sizes, 'md')};
+    background-size: #{map-get($sizes, '4x')} #{map-get($sizes, '4x')};
 }
 
 .whatsapp-square {
@@ -43,10 +52,10 @@ $sizes: (
     border: none;
     text-decoration: none;
     z-index: 1000;
-    width: #{map-get($sizes, 'md')};
-    height: #{map-get($sizes, 'md')};
+    width: #{map-get($sizes, '4x')};
+    height: #{map-get($sizes, '4x')};
     background: url(#{map-get($whatsapp_svg_paths, 'square')});
-    background-size: #{map-get($sizes, 'md')} #{map-get($sizes, 'md')};
+    background-size: #{map-get($sizes, '4x')} #{map-get($sizes, '4x')};
 }
 
 .position-left {
@@ -57,7 +66,7 @@ $sizes: (
     right: 12px;
 }
 
-// MIXINS
+//- MIXINS
 @each $size_name, $size_value in $sizes {
     .size-#{$size_name} {
         width: #{$size_value} !important;
